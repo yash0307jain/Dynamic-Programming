@@ -1,3 +1,4 @@
+# Calculation of time difference between code with DP and without DP
 import time
 
 print("----------INPUT----------")
@@ -6,31 +7,33 @@ n = int(input('Enter a number--> '))
 
 print("----------WITH DP----------")
 
-def sumDP(num, mem):
+def splittingDP(num, mem):
     if num in mem:
         return mem[num]
-    if num <= 0:
+    if num <= 1:
+        print(num)
         return num
-    print(num)
-    to_return = sumDP(num-1, mem) + sumDP(num-2, mem)
+    # print(num)
+    to_return = splittingDP(num-1, mem) + splittingDP(num-2, mem)
     mem[num] = to_return
     return to_return
 
 mem = {}
 start1 = time.time()
-result1 = sumDP(n, mem)
+result1 = splittingDP(n, mem)
 end1 = time.time()
 
 print("----------WITHOUT DP----------")
 
-def sum(num):
-    if num <= 0:
+def splitting(num):
+    if num <= 1:
+        print(num)
         return num
-    print(num)
-    return sum(num-1) + sum(num-2)
+    # print(num)
+    return splitting(num-1) + splitting(num-2)
 
 start2 = time.time()
-result2 = sum(n)
+result2 = splitting(n)
 end2 = time.time()
 
 print("----------OUTPUT----------")

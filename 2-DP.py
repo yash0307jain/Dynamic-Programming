@@ -1,3 +1,4 @@
+# Number of subset having some specific sum
 print("----------INPUT----------")
 
 str_arr = input('Enter array of integers: ').split(' ')

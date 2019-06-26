@@ -25,7 +25,6 @@ def toSplitList(arr):
     splitList(arr, len(arr) - 1, mem, all_mem)
     return all_mem
 
-
 print("----------OUTPUT----------")
 
 result1 = toSplitList(arr1)

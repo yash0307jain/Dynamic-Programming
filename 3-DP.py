@@ -1,3 +1,4 @@
+# Split into all the possible subset of an array can be either number of string
 print("----------INPUT----------")
 
 # For arrays
