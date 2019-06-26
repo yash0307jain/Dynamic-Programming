@@ -1,5 +1,4 @@
 # Longest Common Subsequence
-# Longest Common Subsequence
 print("----------INPUT----------")
 
 # For arrays
