@@ -1,7 +1,12 @@
 print("----------INPUT----------")
 
+# For arrays
 str_arr = input('Enter array of integers: ').split(' ')
 arr = [int(num) for num in str_arr]
+
+# For strings
+# str_arr = input('Enter array of strings: ')
+# arr = str_arr
 
 # print("----------DP----------")
 
