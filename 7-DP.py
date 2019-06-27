@@ -5,16 +5,21 @@ n, num = input().split(' ')
 n = int(n)
 num = int(num)
 str_arr = input().split(' ')
-arr = [int(num) for num in str_arr]
+test_arr = [int(number) for number in str_arr]
+
+arr = []
+for i in range(0,n):
+    if test_arr[i] <= num:
+        arr.append(test_arr[i])
 
 # print("----------DP----------")
 
 def ss(arr, num, ind, mem, count, memory):
-    key = str(ind) + ":" + str(mem)
-
     if mem > num:
         return count
 
+    key = str(ind) + ":" + str(mem)
+    
     if key in memory:
         count.append(1)
         return memory[key]
