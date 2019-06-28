@@ -28,10 +28,8 @@ def maxMul(num):
         memory = {}
         splitMul(num, mul, mem, memory)
         return max(mem)
-    elif num == 3:
-        return 2
-    else:
-        return 1
+    elif num < 4:
+        return num - 1
     
 
 print("----------OUTPUT----------")
